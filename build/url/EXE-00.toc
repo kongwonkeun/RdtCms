@@ -1,0 +1,232 @@
+('E:\\Kprovs\\xibo3\\dist\\url.exe',
+ False,
+ False,
+ False,
+ None,
+ None,
+ False,
+ False,
+ '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><assembly manifestVersion="1.0" xmlns="urn:schemas-microsoft-com:asm.v1"><assemblyIdentity name="url" processorArchitecture="amd64" type="win32" version="1.0.0.0"/><dependency><dependentAssembly><assemblyIdentity language="*" name="Microsoft.Windows.Common-Controls" processorArchitecture="*" publicKeyToken="6595b64144ccf1df" type="win32" version="6.0.0.0"/><compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1"/></dependentAssembly></dependency><compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1"><application><supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}"/><supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/><supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}"/><supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}"/><supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}"/></application></compatibility></assembly>',
+ True,
+ 'url.pkg',
+ [('PYZ-00.pyz', 'E:\\Kprovs\\xibo3\\build\\url\\PYZ-00.pyz', 'PYZ'),
+  ('struct',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\struct.pyo',
+   'PYMODULE'),
+  ('pyimod01_os_path',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PyInstaller\\loader\\pyimod01_os_path.pyc',
+   'PYMODULE'),
+  ('pyimod02_archive',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PyInstaller\\loader\\pyimod02_archive.pyc',
+   'PYMODULE'),
+  ('pyimod03_importers',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PyInstaller\\loader\\pyimod03_importers.pyc',
+   'PYMODULE'),
+  ('pyiboot01_bootstrap',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
+   'PYSOURCE'),
+  ('pyi_rth_qt5plugins',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PyInstaller\\loader\\rthooks\\pyi_rth_qt5plugins.py',
+   'PYSOURCE'),
+  ('url', 'E:\\Kprovs\\xibo3\\url.py', 'PYSOURCE'),
+  ('python37.dll',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\python37.dll',
+   'BINARY'),
+  ('VCRUNTIME140.dll',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\VCRUNTIME140.dll',
+   'BINARY'),
+  ('qt5_plugins\\styles\\qwindowsvistastyle.dll',
+   'C:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\plugins\\styles\\qwindowsvistastyle.dll',
+   'BINARY'),
+  ('qt5_plugins\\imageformats\\qicns.dll',
+   'C:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\plugins\\imageformats\\qicns.dll',
+   'BINARY'),
+  ('qt5_plugins\\imageformats\\qtga.dll',
+   'C:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\plugins\\imageformats\\qtga.dll',
+   'BINARY'),
+  ('qt5_plugins\\platforms\\qoffscreen.dll',
+   'C:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\plugins\\platforms\\qoffscreen.dll',
+   'BINARY'),
+  ('qt5_plugins\\imageformats\\qsvg.dll',
+   'C:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\plugins\\imageformats\\qsvg.dll',
+   'BINARY'),
+  ('qt5_plugins\\imageformats\\qjpeg.dll',
+   'C:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\plugins\\imageformats\\qjpeg.dll',
+   'BINARY'),
+  ('qt5_plugins\\imageformats\\qico.dll',
+   'C:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\plugins\\imageformats\\qico.dll',
+   'BINARY'),
+  ('qt5_plugins\\imageformats\\qwbmp.dll',
+   'C:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\plugins\\imageformats\\qwbmp.dll',
+   'BINARY'),
+  ('qt5_plugins\\platforms\\qminimal.dll',
+   'C:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\plugins\\platforms\\qminimal.dll',
+   'BINARY'),
+  ('qt5_plugins\\imageformats\\qwebp.dll',
+   'C:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\plugins\\imageformats\\qwebp.dll',
+   'BINARY'),
+  ('qt5_plugins\\platforms\\qwebgl.dll',
+   'C:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\plugins\\platforms\\qwebgl.dll',
+   'BINARY'),
+  ('qt5_plugins\\imageformats\\qtiff.dll',
+   'C:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\plugins\\imageformats\\qtiff.dll',
+   'BINARY'),
+  ('qt5_plugins\\imageformats\\qgif.dll',
+   'C:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\plugins\\imageformats\\qgif.dll',
+   'BINARY'),
+  ('qt5_plugins\\platforms\\qwindows.dll',
+   'C:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\plugins\\platforms\\qwindows.dll',
+   'BINARY'),
+  ('qt5_plugins\\iconengines\\qsvgicon.dll',
+   'C:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\plugins\\iconengines\\qsvgicon.dll',
+   'BINARY'),
+  ('qt5_plugins\\bearer\\qgenericbearer.dll',
+   'C:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\plugins\\bearer\\qgenericbearer.dll',
+   'BINARY'),
+  ('_ssl',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\DLLs\\_ssl.pyd',
+   'EXTENSION'),
+  ('pyexpat',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\DLLs\\pyexpat.pyd',
+   'EXTENSION'),
+  ('_hashlib',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\DLLs\\_hashlib.pyd',
+   'EXTENSION'),
+  ('_lzma',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\DLLs\\_lzma.pyd',
+   'EXTENSION'),
+  ('_socket',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\DLLs\\_socket.pyd',
+   'EXTENSION'),
+  ('unicodedata',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\DLLs\\unicodedata.pyd',
+   'EXTENSION'),
+  ('_bz2',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\DLLs\\_bz2.pyd',
+   'EXTENSION'),
+  ('select',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\DLLs\\select.pyd',
+   'EXTENSION'),
+  ('PySide2.QtCore',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\QtCore.pyd',
+   'EXTENSION'),
+  ('PySide2.QtNetwork',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\QtNetwork.pyd',
+   'EXTENSION'),
+  ('shiboken2.shiboken2',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\shiboken2\\shiboken2.pyd',
+   'EXTENSION'),
+  ('PySide2.QtWidgets',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\QtWidgets.pyd',
+   'EXTENSION'),
+  ('PySide2.QtGui',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\QtGui.pyd',
+   'EXTENSION'),
+  ('Qt5Widgets.dll',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\qt5widgets.dll',
+   'BINARY'),
+  ('Qt5Core.dll',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\qt5core.dll',
+   'BINARY'),
+  ('Qt5Gui.dll',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\qt5gui.dll',
+   'BINARY'),
+  ('Qt5Svg.dll',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\qt5svg.dll',
+   'BINARY'),
+  ('Qt5Quick.dll',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\qt5quick.dll',
+   'BINARY'),
+  ('Qt5Network.dll',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\qt5network.dll',
+   'BINARY'),
+  ('Qt5WebSockets.dll',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\qt5websockets.dll',
+   'BINARY'),
+  ('libssl-1_1-x64.dll',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\DLLs\\libssl-1_1-x64.dll',
+   'BINARY'),
+  ('libcrypto-1_1-x64.dll',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\DLLs\\libcrypto-1_1-x64.dll',
+   'BINARY'),
+  ('python3.dll',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\python3.dll',
+   'BINARY'),
+  ('pyside2.abi3.dll',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\pyside2.abi3.dll',
+   'BINARY'),
+  ('shiboken2.abi3.dll',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\shiboken2\\shiboken2.abi3.dll',
+   'BINARY'),
+  ('Qt5Qml.dll',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PySide2\\Qt5Qml.dll',
+   'BINARY'),
+  ('MSVCP140.dll',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\shiboken2\\MSVCP140.dll',
+   'BINARY'),
+  ('base_library.zip',
+   'E:\\Kprovs\\xibo3\\build\\url\\base_library.zip',
+   'DATA'),
+  ('url.exe.manifest',
+   'E:\\Kprovs\\xibo3\\build\\url\\url.exe.manifest',
+   'BINARY'),
+  ('pyi-windows-manifest-filename url.exe.manifest', '', 'OPTION')],
+ [],
+ False,
+ False,
+ 1559187631,
+ [('runw.exe',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit\\runw.exe',
+   'EXECUTABLE')])
