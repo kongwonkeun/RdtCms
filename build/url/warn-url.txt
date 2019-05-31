@@ -14,9 +14,9 @@ Types if import:
 IMPORTANT: Do NOT post this list to the issue-tracker. Use it as a basis for
            yourself tracking down the missing module. Thanks!
 
-missing module named 'PyQt5.QtCore' - imported by c:\program files (x86)\microsoft visual studio\shared\python37_64\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_qt5plugins.py (optional)
-missing module named PyQt5 - imported by c:\program files (x86)\microsoft visual studio\shared\python37_64\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_qt5plugins.py (optional)
-missing module named sip - imported by c:\program files (x86)\microsoft visual studio\shared\python37_64\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_qt5plugins.py (optional)
+missing module named 'PyQt5.QtCore' - imported by e:\python37\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_qt5plugins.py (optional)
+missing module named PyQt5 - imported by e:\python37\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_qt5plugins.py (optional)
+missing module named sip - imported by e:\python37\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_qt5plugins.py (optional)
 missing module named resource - imported by posix (top-level), E:\Kprovs\xibo3\url.py (top-level)
 missing module named posix - imported by os (conditional, optional), E:\Kprovs\xibo3\url.py (top-level)
 missing module named _posixsubprocess - imported by subprocess (conditional), E:\Kprovs\xibo3\url.py (top-level)

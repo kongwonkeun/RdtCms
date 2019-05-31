@@ -148,8 +148,11 @@ class XmdsThread(QThread):
         self.xmds_stop = False
         cl = self.xmdsClient
         param = xmds.RegisterDisplayParam()
+        #---- kong ----
+        param.macAddress = cl.mac_address
         param.xmrChannel = self.xmr_channel
         param.xmrPubKey = self.xmr_pubkey
+        #----
         sched_resp = xmds.ScheduleResponse()
         sched_cache = self.config.saveDir + '/schedule.xml'
         rf_cache = self.config.saveDir + '/rf.xml'

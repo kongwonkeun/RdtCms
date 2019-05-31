@@ -97,9 +97,11 @@ class XmrThread(QThread):
                     self._channel = v
         else:
             rsa = RSA.generate(2048)
-            self._prikey = rsa.exportKey()
-            self._pubkey = rsa.publickey().exportKey()
-            self._channel = md5(('%d %s' % (time.time(), self.config.xmrPubUrl)).encode()).hexdigest()
+            self._prikey = (rsa.exportKey()).decode()
+            self._pubkey = (rsa.publickey().exportKey()).decode()
+            p = ('%d %s' % (time.time(), self.config.xmrPubUrl)).encode()
+            self._channel = md5(p).hexdigest()
+
             for k, v in self.defaults.items():
                 if  k == 'prikey':
                     key[k] = self._prikey
@@ -107,8 +109,9 @@ class XmrThread(QThread):
                     key[k] = self._pubkey
                 if  k == 'ch':
                     key[k] = self._channel
+
             with open(self.xmrkey, 'w') as f:
-                json.dump(key.decode('utf-8'), f, indent=4, separators=(',', ': '), sort_keys=True)
+                json.dump(key, f, indent=4, separators=(',', ': '), sort_keys=True)
 
     @property
     def pubkey(self):

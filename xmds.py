@@ -70,7 +70,6 @@ class Client:
         tmp = None
         try:
             if  'registerDisplay'.lower() == method.lower():
-                params.macAddress = self._mac_address
                 if  self.ver == 4:
                     text = self.client.service.RegisterDisplay(
                         self.keys['server'],
@@ -142,7 +141,7 @@ class Client:
 
         except SoapFault as err:
             print('---- xmds: soap fault error ----')
-        except exceptions.IOError as err:
+        except IOError as err:
             print('---- xmds: soap io error ----')
 
         if  tmp and tmp.parse(text):

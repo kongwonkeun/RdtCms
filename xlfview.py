@@ -66,7 +66,7 @@ class MediaView(QObject):
         elif 'video' == media['type']:
             view = VideoMediaView(media, parent)
         elif 'webpage' == media['type']:
-            view = WebMediaView(media, parent)
+            view = WebMediaView_(media, parent)
         else:
             view = TextMediaView(media, parent)
         return view
@@ -265,6 +265,39 @@ class VideoMediaView(MediaView):
 #===============================
 #
 #
+class WebMediaView_(MediaView):
+
+    def __init__(self, media, parent):
+        super(WebMediaView_, self).__init__(media, parent)
+        self.widget = QWebEngineView(parent)
+        self.widget.setGeometry(media['geometry'])
+        self.set_default_widget_prop()
+        self.widget.setDisabled(True)
+
+    @Slot()
+    def play(self):
+        self.finished = 0
+        url = self.options['uri']
+        self.widget.load(QUrl.fromPercentEncoding(QByteArray(url.encode('utf-8'))))
+        self.widget.show()
+        self.widget.raise_()
+        if  float(self.duration) > 0:
+            self.play_timer.setInterval(int(float(self.duration) * 1000))
+            self.play_timer.start()
+        self.started_signal.emit()
+
+    @Slot()
+    def stop(self, delete_widget=False):
+        #---- kong ----
+        if  not self.widget:
+            return False
+        super(WebMediaView_, self).stop(delete_widget)
+        return True
+        #----
+
+#===============================
+#
+#
 class WebMediaView(MediaView):
 
     def __init__(self, media, parent):
@@ -321,10 +354,6 @@ class WebMediaView(MediaView):
         self.widget.raise_()
         #---- kong ----
         url = self.options['uri']
-        print(url)
-        print(url.encode('utf-8'))
-        print(QByteArray(url.encode('utf-8')))
-        print(QUrl.fromPercentEncoding(QByteArray(url.encode('utf-8'))))
         args = [
             str(self.rect.left()), 
             str(self.rect.top()),
@@ -332,7 +361,8 @@ class WebMediaView(MediaView):
             str(self.rect.height()),
             QUrl.fromPercentEncoding(QByteArray(url.encode('utf-8')))
         ]
-        self.process.start('dist/web.exe', args) # for windows
+
+        #self.process.start('dist/web.exe', args) # for windows
         #self.process.start('./dist/web', args) # for RPi
         self.stop_timer.start()
         #----
@@ -359,6 +389,7 @@ class WebMediaView(MediaView):
         self.stop_timer.stop()
         return True
         #----
+
 #===============================
 #
 #
