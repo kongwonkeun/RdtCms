@@ -20,6 +20,7 @@ class XiboConfig:
         self.layout_file_ext = None
         self.xmdsVersion = None
         self.xmrPubUrl = None
+        self.clientId = None
         self.load()
         pass
 
@@ -38,6 +39,7 @@ class XiboConfig:
             'url': 'http://cms_ip/xibo',
             'xmdsVersion': 5,
             'xmrPubUrl': 'tcp://cms_ip:9505',
+            'clientId': 'rdt-x'
         }
 
     def load(self):

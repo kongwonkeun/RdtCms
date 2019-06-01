@@ -26,6 +26,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="config.py" />
+    <Compile Include="player.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="server.py" />
     <Compile Include="ui.py" />
     <Compile Include="url.py" />

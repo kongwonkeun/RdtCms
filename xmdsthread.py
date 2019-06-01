@@ -39,7 +39,7 @@ class XmdsThread(QThread):
         self.layout_time = (0, 0)
         if  not os.path.isdir(config.saveDir):
             os.mkdir(config.saveDir, 0o700)
-        self.xmdsClient = xmds.Client(config.url, ver=config.xmdsVersion)
+        self.xmdsClient = xmds.Client(config.url, config.clientId, ver=config.xmdsVersion)
         self.xmdsClient.set_keys(config.serverKey)
 
     def __enter__(self):
@@ -147,7 +147,7 @@ class XmdsThread(QThread):
         self.xmds_running = True
         self.xmds_stop = False
         cl = self.xmdsClient
-        param = xmds.RegisterDisplayParam()
+        param = xmds.RegisterDisplayParam(display_name=self.config.clientId)
         #---- kong ----
         param.macAddress = cl.mac_address
         param.xmrChannel = self.xmr_channel

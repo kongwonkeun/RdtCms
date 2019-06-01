@@ -5,22 +5,16 @@ import os
 import signal
 import time
 
-from PySide2.QtCore import QObject
-from PySide2.QtCore import QProcess
+from PySide2.QtCore import QObject, QProcess, QTimer
+from PySide2.QtCore import SIGNAL, Signal, Slot
+from PySide2.QtCore import QUrl, QByteArray
 from PySide2.QtCore import QRect
-from PySide2.QtCore import QTimer
-from PySide2.QtCore import QUrl
 from PySide2.QtCore import Qt
-from PySide2.QtCore import SIGNAL
-from PySide2.QtCore import Signal
-from PySide2.QtCore import Slot
-from PySide2.QtCore import QByteArray
-from PySide2.QtGui import QImage
-from PySide2.QtGui import QPixmap
-from PySide2.QtGui import QPixmapCache
-from PySide2.QtWidgets import QLabel
-from PySide2.QtWidgets import QWidget
+from PySide2.QtGui import QImage, QPixmap, QPixmapCache
+from PySide2.QtWidgets import QWidget, QLabel
 from PySide2.QtWebEngineWidgets import QWebEngineView
+from PySide2.QtMultimediaWidgets import QVideoWidget
+from PySide2.QtMultimedia import QMediaPlayer, QMediaPlaylist, QMediaContent
 
 #===============================
 #
@@ -64,7 +58,7 @@ class MediaView(QObject):
         if  'image' == media['type']:
             view = ImageMediaView(media, parent)
         elif 'video' == media['type']:
-            view = VideoMediaView(media, parent)
+            view = VideoMediaView_(media, parent)
         elif 'webpage' == media['type']:
             view = WebMediaView_(media, parent)
         else:
@@ -265,6 +259,48 @@ class VideoMediaView(MediaView):
 #===============================
 #
 #
+class VideoMediaView_(MediaView):
+
+    def __init__(self, media, parent):
+        super(VideoMediaView_, self).__init__(media, parent)
+        self.widget = QVideoWidget(parent)
+        self.player = QMediaPlayer()
+        self.playlist = QMediaPlaylist()
+        self.player.setPlaylist(self.playlist)
+        self.player.setVideoOutput(self.widget)
+        self.widget.setGeometry(media['geometry'])
+        self.set_default_widget_prop()
+        self.widget.setDisabled(True)
+
+    @Slot()
+    def play(self):
+        self.finished = 0
+        path = '%s/%s' % (self.save_dir, self.options['uri'])
+        self.playlist.addMedia(QMediaContent(path))
+        self.player.play()
+
+        self.widget.show()
+        self.widget.raise_()
+        if  float(self.duration) > 0:
+            self.play_timer.setInterval(int(float(self.duration) * 1000))
+            self.play_timer.start()
+        self.started_signal.emit()
+
+    @Slot()
+    def stop(self, delete_widget=False):
+        #---- kong ----
+        if  not self.widget:
+            return False
+        self.player.stop()
+        self.playlist = None
+        self.player = None
+        super(VideoMediaView_, self).stop(delete_widget)
+        return True
+        #----
+
+#===============================
+#
+#
 class WebMediaView_(MediaView):
 
     def __init__(self, media, parent):
@@ -361,7 +397,6 @@ class WebMediaView(MediaView):
             str(self.rect.height()),
             QUrl.fromPercentEncoding(QByteArray(url.encode('utf-8')))
         ]
-
         #self.process.start('dist/web.exe', args) # for windows
         #self.process.start('./dist/web', args) # for RPi
         self.stop_timer.start()
@@ -411,7 +446,7 @@ class TextMediaView(MediaView):
             self.region_id,
             self.id
         )
-        self.widget.load('file://' + path)
+        self.widget.load('file:///' + path)
         self.widget.show()
         self.widget.raise_()
         if  float(self.duration) > 0:

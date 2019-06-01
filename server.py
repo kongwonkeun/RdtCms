@@ -29,6 +29,7 @@ class MyHandler(BaseHTTPRequestHandler):
                 <table>
                 <tr><td>cms ip</td><td><input type="text" name="cms_ip"></td></tr>
                 <tr><td>cms key</td><td><input type="text" name="cms_key"></td></tr>
+                <tr><td>client id</td><td><input type="text" name="client_id"></td></tr>
                 <tr><td></td><td><input type="submit" value="sebmit"></td></tr>
                 </table>
             </form>
@@ -96,6 +97,8 @@ class MyHandler(BaseHTTPRequestHandler):
                     cfg[k] = 'http://%s/xibo' % form.getvalue('cms_ip')
                 if  k == 'xmrPubUrl':
                     cfg[k] = 'tcp://%s:9505' % form.getvalue('cms_ip')
+                if  k == 'clientId':
+                    cfg[k] = form.getvalue('client_id')
             with open(self.config, 'w') as f:
                 json.dump(cfg, f, indent=4, separators=(',',': '), sort_keys=True)
                 #---- kong ---- for release

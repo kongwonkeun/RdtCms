@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<layout width="1920" height="1080" bgcolor="#000" schemaVersion="3"><region id="7" width="1920.0000" height="1080.0000" top="0.0000" left="0.0000"><options><loop>1</loop><transitionDirection>N</transitionDirection><transitionDuration/><transitionType/></options><media id="6" type="webpage" render="native" duration="10" useDuration="1"><options><modeid>1</modeid><name>rdt</name><pageWidth>0</pageWidth><transparency>1</transparency><uri>http%3A%2F%2F35.243.90.90%3A5000</uri><xmds>1</xmds></options><raw/></media></region><tags><tag>L4</tag></tags></layout>

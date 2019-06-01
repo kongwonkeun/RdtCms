@@ -17,13 +17,14 @@ from xml.etree import ElementTree
 #
 class Client:
 
-    def __init__(self, url, ver=4):
+    def __init__(self, url, cid, ver=4):
         self.keys = {
             'server': '',
             'hardware': ''
         }
         self.url = url
         self.ver = ver
+        self.cid = cid
         self._mac_address = None
         self.client = None
         self.set_identity()
@@ -34,7 +35,7 @@ class Client:
         if  node is None:
             raise RuntimeError('no network interface found')
         self._mac_address = ':'.join([str('%012x' % node)[x:x + 2] for x in range(0, 12, 2)])
-        url = 'xibopy://%s/%s/%s' % (sys.platform, os.name, self._mac_address)
+        url = '%s://%s/%s/%s' % (self.cid, sys.platform, os.name, self._mac_address)
         self.keys['hardware'] = uuid.uuid3(uuid.NAMESPACE_URL, url)
 
     @property
